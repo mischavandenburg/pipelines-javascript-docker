@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mischavandenburgpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mischavandenburgpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: mischavandenburgpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mischavandenburgpipelinesjavascriptdocker 
+          image: mischamycontainerregistry.azurecr.io/mischavandenburgpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
